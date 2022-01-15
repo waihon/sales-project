@@ -12,7 +12,7 @@
   <tbody>
     <!-- *ngFor will loop over the array and create a table row -->
     <!-- for each array element. -->
-    <tr *ngFor="let tempSalesPerson of salesPersonList">
+    <tr *ngFor="let tempSalesPerson of salesPersonList" [ngClass]="{'highlight': tempSalesPerson.salesVolume >= 60000}">
       <td>{{ tempSalesPerson.firstName }}</td>
       <td>{{ tempSalesPerson.lastName }}</td>
       <td>{{ tempSalesPerson.email }}</td>
